@@ -53,7 +53,7 @@ html(data-ng-app='' ng-strict-di)
         // Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
       // /.container-fluid
-    header
+    header#header
       .header-content
         .header-content-inner
           h1 Hi! 
@@ -83,7 +83,7 @@ html(data-ng-app='' ng-strict-di)
                 p.text-muted Bachelor of Computer Science Honours
           .col-lg-3.col-md-6.text-center
             .service-box
-              .btn.btn-primary(href="#") 
+              .btn.btn-primary.disabled(type="button", data-toggle="collapse", data-target="#languages")
                 i.fa.fa-4x.fa-language.wow.bounceIn.text-default(data-wow-delay=".2s")
                   #map-canvas.div
               h3 Languages 
@@ -140,7 +140,9 @@ html(data-ng-app='' ng-strict-di)
     .navbar.navbar-fixed-top
 
     //jquery
-    script(src="//code.jquery.com/jquery-1.11.3.min.js")    
+    script(src="http://code.jquery.com/jquery-1.9.1.js")
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js")
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js")
     // js Core JavaScript
     script(src="js/bootstrap.min.js")
     // Plugin JavaScript
@@ -164,6 +166,7 @@ html(data-ng-app='' ng-strict-di)
     // Custom Theme JavaScript
     script(src="js/creative.js")
     script(src="js/dropdown.js")
+    script(src="js/smoothPageScroll.js")
     script(src="js/typed.js")
     script(type="text/javascript").
       $(function(){
